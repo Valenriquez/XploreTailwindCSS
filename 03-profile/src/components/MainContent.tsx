@@ -1,5 +1,6 @@
-const MainContent = () => (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 text-center">
+function MainContent() {
+    return (
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10 text-center">
         <section className="mt-5">
             <h2 className="text-2xl font-bold text-blue-600">Education</h2>
             <div className="mt-2">
@@ -61,6 +62,7 @@ const MainContent = () => (
             </div>
         </section>
     </div>
-);
+    );
+}
 
 export default MainContent;
