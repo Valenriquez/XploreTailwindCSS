@@ -1,9 +1,10 @@
-"use client";
+"use client"
 import Image from "next/image";
- 
+import Card from "./components/Card";
+import NavBar from "./components/Navbar";
 import { useEffect, useState } from "react";
 
-type character = {
+type Character = {
   id: number;
   name: string;
   status: string;
@@ -18,8 +19,9 @@ type character = {
 };
 
 export default function Home() {
-  const [characters, setCharacters] = useState<character[]>([]);
-  // Function to fetch data from the API
+  const [characters, setCharacters] = useState<Character[]>([]);
+  const [selectedCharacter, setSelectedCharacter] = useState<number | null>(null);
+
   const fetchData = async () => {
     try {
       const response = await fetch("https://rickandmortyapi.com/api/character");
@@ -37,16 +39,37 @@ export default function Home() {
     fetchData();
   }, []);
 
+  const handleCardClick = (id: number) => {
+    if (selectedCharacter === id) {
+      setSelectedCharacter(null);
+    } else { 
+      setSelectedCharacter(id);
+    }
+  };
+
   return (
     <>
-      
+      <NavBar/> 
       <div className="m-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7 place-items-center">
           {characters.map((character, index) => (
-            
-             
-              character.name
-               
+            <div
+              className={`card p-4 border border-gray-300 rounded bg-white shadow transition-transform duration-300 ease-in-out ${
+                selectedCharacter === character.id ? 'scale-110' : ''
+              }`}
+              onClick={() => handleCardClick(character.id)}
+            >
+              <Card
+                key={index}
+                id={character.id!}
+                imgUrl={character.image}
+                name={character.name!}
+                status={character.status!}
+                species={character.species!}
+                gender={character.gender!}
+                location={character.location.name}
+              />
+            </div>
           ))}
         </div>
       </div>
