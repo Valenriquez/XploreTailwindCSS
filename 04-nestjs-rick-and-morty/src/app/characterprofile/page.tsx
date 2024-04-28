@@ -1,6 +1,7 @@
+"use client"
 import { useEffect, useState } from "react";
-import NavBar from "../components/navbar";
-import { motion } from "framer-motion";
+import NavBar from "../components/Navbar";
+  import { motion } from "framer-motion";
 
 function CharacterProfilePage() {
   const [character, setCharacter] = useState({
@@ -29,7 +30,7 @@ function CharacterProfilePage() {
   const fetchCharacter = async () => {
     try {
       const response = await fetch(
-        `https://rickandmortyapi.com/api/character/${characterId}`
+        `https://rickandmortyapi.com/api/character/${character.id}`
       );
       if (!response.ok) {
         throw new Error("Failed to fetch character");
@@ -57,13 +58,13 @@ function CharacterProfilePage() {
   };
 
   useEffect(() => {
-    if (characterId) {
+    if (character.id) {
       fetchCharacter();
     }
-  }, [characterId]);
+  }, [character.id]);
 
   useEffect(() => {
-    if (characterId) {
+    if (character.id) {
       fetchFirstEpisode();
     }
   }, [character]);

@@ -1,7 +1,8 @@
+"use client"
 import { useEffect, useState } from "react";
-import Card from "../components/card";
-import NavBar from "../components/navbar";
-import Cookies from "js-cookie"; // Import Cookies library
+import Card from "../components/Card";
+import NavBar from "../components/Navbar";
+import Cookies from "js-cookie";  
 
 type Character = {
   id: number;
