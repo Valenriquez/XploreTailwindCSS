@@ -74,7 +74,7 @@ export default function Card({
             </svg>
             </button>
           <a
-            href={`/profile?id=${id}`}
+            href={`/characterprofile?id=${id}`}
             className="block mt-2 text-sm font-semibold text-center text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-lg focus:outline-none"
           >
             Read more
