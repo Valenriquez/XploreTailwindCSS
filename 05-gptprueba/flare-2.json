@@ -1,0 +1,39 @@
+{
+    "name": "life_recommendations",
+    "children": [
+      {
+        "name": "Physical Well-being",
+        "children": [
+          { "name": "Exercise Regularly", "value": 3 },
+          { "name": "Eat a Balanced Diet", "value": 1 },
+          { "name": "Stay Hydrated", "value": 1 }
+        ]
+      },
+      {
+        "name": "Mental Health",
+        "children": [
+          { "name": "Practice Mindfulness", "value": 1 },
+          { "name": "Seek Social Support", "value": 8 },
+          { "name": "Limit Screen Time", "value": 1 }
+        ]
+      },
+      {
+        "name": "Personal Growth",
+        "children": [
+          { "name": "Set Goals", "value": 1 },
+          { "name": "Read Regularly", "value": 1 },
+          { "name": "Step Out of Comfort Zone", "value": 1 }
+        ]
+      },
+      {
+        "name": "Relationships",
+        "children": [
+          { "name": "Communicate Effectively", "value": 2 },
+          { "name": "Show Appreciation", "value": 1 },
+          { "name": "Set Boundaries", "value": 4 }
+        ]
+      }
+
+    ]
+  }
+  
