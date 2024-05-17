@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "lint:": "next lint --fix",
-    "prepare": "cd .. && husky 04-nestjs-rick-and-morty/.husky || true"
+    "prepare": "husky install && cd .husky && chmod +x *"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
@@ -40,5 +40,14 @@
     "prettier-plugin-tailwindcss": "^0.5.14",
     "tailwindcss": "^3.4.3",
     "typescript": "^5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint --fix",
+    "*.{json,md,css,scss,html}": "prettier --write"
   }
 }
