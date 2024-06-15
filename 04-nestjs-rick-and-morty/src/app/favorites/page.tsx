@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 import Card from "../components/Card";
-import NavBar from "../components/Navbar";
+import Header2 from "../components/Header2";
 
 type character = {
   id: number;
@@ -53,7 +53,7 @@ export default function Favorites() {
 
   return (
     <>
-      <NavBar></NavBar>
+      <Header2></Header2>
       <div className="m-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7 place-items-center">
           {characters.map((character, index) => (

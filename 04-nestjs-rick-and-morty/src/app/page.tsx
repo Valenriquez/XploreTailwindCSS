@@ -2,9 +2,9 @@
 import Image from "next/image";
 import Card from "./components/Card";
 import Footer from "./components/Footer";
-import NavBar from "./components/Navbar";
+import Header2 from "./components/Header2";
 import { useEffect, useState } from "react";
-
+ 
 type Character = {
   id: number;
   name: string;
@@ -50,7 +50,7 @@ export default function Home() {
 
   return (
     <>
-      <NavBar/> 
+      <Header2/> 
       <div className="m-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-7 place-items-center">
           {characters.map((character, index) => (

@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "lib": [
       "dom",
       "dom.iterable",
@@ -25,14 +26,18 @@
       "@/*": [
         "./src/*"
       ]
-    }
+    },
+    "types": ["vitest/globals"]
   },
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
-, "next.config.ts", "next.config.ts", "next.config.mjs"  ],
+    ".next/types/**/*.ts",
+    "next.config.ts",
+    "next.config.ts",
+    "next.config.mjs"
+  ],
   "exclude": [
     "node_modules"
   ]

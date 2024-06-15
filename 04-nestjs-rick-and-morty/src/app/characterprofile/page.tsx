@@ -1,8 +1,8 @@
 "use client"
 import { useEffect, useState } from "react";
 import NavBar from "../components/Navbar";
-  import { motion } from "framer-motion";
-
+import { motion } from "framer-motion";
+ 
 function CharacterProfilePage() {
   const [character, setCharacter] = useState({
     id: 0,
